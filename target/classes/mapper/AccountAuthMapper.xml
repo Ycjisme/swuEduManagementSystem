@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ycj.student.mapper.AccountAuthMapper">
+
+    <select id="getAuthListByAccountIds" resultType="com.ycj.student.dto.account.auth.AccountAuthDTO">
+    select a.*,
+            b.name clazzName,
+            b.department
+        from edu_account_auth a
+        left join edu_clazz b on b.id = a.clazz_id
+        where a.account_id in
+        <foreach item="item" collection="accountIdList" separator="," open="(" close=")" index="">
+            #{item}
+        </foreach>
+    </select>
+
+    <delete id="deleteByAccountId">
+        delete from edu_account_auth where account_id = #{accountId}
+    </delete>
+
+</mapper>

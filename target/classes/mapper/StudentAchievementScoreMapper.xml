@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ycj.student.mapper.StudentAchievementScoreMapper">
+
+    <delete id="deleteByAchievementId" parameterType="java.lang.Integer">
+        delete from edu_student_achievement_score where achievement_id = #{achievementId}
+    </delete>
+
+    <select id="getScoreListByAchievementId" resultType="com.ycj.student.dto.achievement.StudentAchievementScoreDTO">
+        select * from edu_student_achievement_score t where t.achievement_id = #{achievementId}
+    </select>
+
+
+</mapper>
