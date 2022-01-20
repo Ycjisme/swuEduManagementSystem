@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: swuedu
+spec:
+  selector:
+    app: swuedu
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30002
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swuedu
+spec:
+  selector:
+    matchLabels:
+      app: swuedu
+  template:
+    metadata:
+      labels:
+        app: swuedu
+    spec:
+      hostAliases:
+        - ip: "101.43.146.193"
+          hostnames:
+            - "art.local"
+      containers:
+        - name: swuedu
+          image: 101.43.146.193:8081/docker-local/swu-project:1.2
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MYSQL_PORT
+              value: "30306"
+            - name: MYSQL_SERVER
+              value: "101.43.146.193"
+            - name: MYSQL_ROOT_PASSWORD
+              value: "password"
+      imagePullSecrets:
+        - name: pullswuprojectimage-local
