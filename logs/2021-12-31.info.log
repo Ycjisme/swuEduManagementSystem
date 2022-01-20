@@ -1,0 +1,679 @@
+2021-12-31 00:07:37.549 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:37.549 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:37.544 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:37.549 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:37.551 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: b083a43d02394ab9a834677b145421aa(String)
+2021-12-31 00:07:37.551 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: b083a43d02394ab9a834677b145421aa(String)
+2021-12-31 00:07:37.551 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: b083a43d02394ab9a834677b145421aa(String)
+2021-12-31 00:07:37.551 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: b083a43d02394ab9a834677b145421aa(String)
+2021-12-31 00:07:37.552 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:37.552 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:37.552 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:37.552 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:37.553 [http-nio-8080-exec-3] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：leader，请求url：/api/statistics/class/student/number，请求参数：{"department":"2021"} 
+2021-12-31 00:07:37.553 [http-nio-8080-exec-2] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：leader，请求url：/api/statistics/grade/class/number，请求参数：{} 
+2021-12-31 00:07:37.553 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.`name` clazzName, (SELECT COUNT(1) FROM edu_student s WHERE s.clazz_id = t.`id`) studentNum FROM edu_clazz t WHERE t.`department` LIKE ?"%"
+2021-12-31 00:07:37.553 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:07:37.553 [http-nio-8080-exec-4] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：leader，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:07:37.553 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 2021(String)
+2021-12-31 00:07:37.553 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:07:37.553 [http-nio-8080-exec-10] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：leader，请求url：/api/statistics/grade/student/number，请求参数：{} 
+2021-12-31 00:07:37.553 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:07:37.553 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:07:37.554 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:07:37.554 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 3(Integer)
+2021-12-31 00:07:37.556 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:07:37.556 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:07:37.556 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:07:37.556 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:37.556 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:07:37.557 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 7(Integer)
+2021-12-31 00:07:37.558 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:37.558 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:07:37.558 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 6(Integer)
+2021-12-31 00:07:37.559 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:37.560 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:07:37.560 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 5(Integer)
+2021-12-31 00:07:37.563 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:37.563 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? , ? , ? , ? )
+2021-12-31 00:07:37.563 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2021-12-31 00:07:37.564 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.290 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryByUsername [BaseJdbcLogger.java:137] - ==>  Preparing: select * from edu_account t where t.username = ?
+2021-12-31 00:07:42.291 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryByUsername [BaseJdbcLogger.java:137] - ==> Parameters: admin(String)
+2021-12-31 00:07:42.292 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryByUsername [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.292 [http-nio-8080-exec-9] INFO  c.m.s.s.s.i.SessionServiceImpl [SessionServiceImpl.java:49] - admin账号校验成功！
+2021-12-31 00:07:42.293 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.insert [BaseJdbcLogger.java:137] - ==>  Preparing: INSERT INTO edu_account_login ( token, username, user_info, create_time ) VALUES ( ?, ?, ?, ? )
+2021-12-31 00:07:42.293 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.insert [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String), admin(String), {"accountType":1,"createTime":1625661968000,"id":1,"lastLoginTime":1640874684000,"password":"21232f297a57a5a743894a0e4a801fc3","status":1,"username":"admin"}(String), 2021-12-31 00:07:42.292(Timestamp)
+2021-12-31 00:07:42.294 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.insert [BaseJdbcLogger.java:137] - <==    Updates: 1
+2021-12-31 00:07:42.294 [http-nio-8080-exec-9] INFO  c.m.s.s.s.i.SessionServiceImpl [SessionServiceImpl.java:64] - 账户登录记录插入成功
+2021-12-31 00:07:42.295 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.updateById [BaseJdbcLogger.java:137] - ==>  Preparing: UPDATE edu_account SET username=?, password=?, status=?, account_type=?, create_time=?, last_login_time=? WHERE id=?
+2021-12-31 00:07:42.295 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.updateById [BaseJdbcLogger.java:137] - ==> Parameters: admin(String), 21232f297a57a5a743894a0e4a801fc3(String), 1(Integer), 1(Integer), 2021-07-07 20:46:08.0(Timestamp), 2021-12-31 00:07:42.294(Timestamp), 1(Integer)
+2021-12-31 00:07:42.296 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.updateById [BaseJdbcLogger.java:137] - <==    Updates: 1
+2021-12-31 00:07:42.296 [http-nio-8080-exec-9] INFO  c.m.s.s.s.i.SessionServiceImpl [SessionServiceImpl.java:69] - 账户最近一次登陆记录更新成功
+2021-12-31 00:07:42.318 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:42.318 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:42.319 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:42.319 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:42.319 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:42.319 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:42.319 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.319 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:42.319 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:42.319 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:42.319 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:42.320 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.320 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.320 [http-nio-8080-exec-3] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/query，请求参数：{} 
+2021-12-31 00:07:42.320 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.320 [http-nio-8080-exec-8] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/student/number，请求参数：{} 
+2021-12-31 00:07:42.320 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.320 [http-nio-8080-exec-4] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/class/student/number，请求参数：{"department":"2021"} 
+2021-12-31 00:07:42.320 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:07:42.320 [http-nio-8080-exec-10] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:07:42.321 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:07:42.321 [http-nio-8080-exec-4] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.`name` clazzName, (SELECT COUNT(1) FROM edu_student s WHERE s.clazz_id = t.`id`) studentNum FROM edu_clazz t WHERE t.`department` LIKE ?"%"
+2021-12-31 00:07:42.321 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:07:42.321 [http-nio-8080-exec-4] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 2021(String)
+2021-12-31 00:07:42.321 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:07:42.321 [http-nio-8080-exec-9] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/class/number，请求参数：{} 
+2021-12-31 00:07:42.321 [http-nio-8080-exec-9] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:07:42.322 [http-nio-8080-exec-9] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:07:42.322 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:07:42.322 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.322 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:07:42.322 [http-nio-8080-exec-4] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:07:42.322 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 7(Integer)
+2021-12-31 00:07:42.323 [http-nio-8080-exec-9] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:07:42.323 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.323 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:07:42.324 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 6(Integer)
+2021-12-31 00:07:42.324 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.325 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:07:42.325 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 5(Integer)
+2021-12-31 00:07:42.325 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:42.326 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? , ? , ? , ? )
+2021-12-31 00:07:42.326 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2021-12-31 00:07:42.326 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:44.537 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:44.537 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:44.537 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:44.537 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:44.538 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:44.538 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:44.539 [http-nio-8080-exec-6] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:07:44.539 [http-nio-8080-exec-5] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:07:44.539 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:07:44.540 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:07:44.540 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:07:44.542 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:07:44.542 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:07:44.544 [http-nio-8080-exec-5] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:07:44.544 [http-nio-8080-exec-5] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:07:44.545 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:07:44.547 [http-nio-8080-exec-5] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:07:44.553 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:07:44.553 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:07:44.562 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:07:46.710 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:46.711 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:46.711 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:46.711 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:46.711 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:46.711 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:46.713 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:46.713 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:46.714 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:46.714 [http-nio-8080-exec-7] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:07:46.714 [http-nio-8080-exec-3] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:07:46.715 [http-nio-8080-exec-4] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:07:46.715 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:07:46.715 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:07:46.715 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:07:46.715 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:07:46.715 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:07:46.716 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:07:46.716 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:07:46.716 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:07:46.716 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:46.719 [http-nio-8080-exec-3] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:07:46.719 [http-nio-8080-exec-3] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:07:46.720 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:07:46.720 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:07:46.721 [http-nio-8080-exec-3] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:07:46.723 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:07:51.991 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:51.991 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:51.991 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:51.991 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:51.991 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:07:51.992 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:07:51.992 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:51.992 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:51.992 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:51.995 [http-nio-8080-exec-9] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:07:51.995 [http-nio-8080-exec-10] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:07:51.995 [http-nio-8080-exec-8] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:07:51.995 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:07:51.996 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:07:51.996 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:07:51.996 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:07:51.996 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:07:51.996 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:07:51.997 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:07:51.997 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:07:51.997 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:07:51.999 [http-nio-8080-exec-9] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:07:51.999 [http-nio-8080-exec-9] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:07:52.000 [http-nio-8080-exec-9] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:07:52.000 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:07:52.000 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:07:52.002 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:38.297 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:38.299 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:38.301 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:38.301 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:38.304 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:38.318 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:38.318 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:38.319 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:38.320 [http-nio-8080-exec-6] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:10:38.320 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:38.320 [http-nio-8080-exec-2] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:10:38.321 [http-nio-8080-exec-5] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:38.321 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:38.321 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:38.321 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:38.321 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:38.321 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:38.321 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:38.322 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:38.322 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:38.323 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:38.325 [http-nio-8080-exec-6] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:10:38.325 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:10:38.325 [http-nio-8080-exec-6] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:10:38.325 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:10:38.326 [http-nio-8080-exec-6] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:10:38.327 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:39.976 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:39.977 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:39.975 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:39.978 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:39.984 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:39.989 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:39.991 [http-nio-8080-exec-4] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:10:39.991 [http-nio-8080-exec-3] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:39.992 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:39.991 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:39.992 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:39.992 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:39.992 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:39.992 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:39.993 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:39.993 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:39.993 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:39.994 [http-nio-8080-exec-1] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:10:39.995 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:39.995 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:39.995 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:39.996 [http-nio-8080-exec-4] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:10:39.996 [http-nio-8080-exec-4] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:10:39.997 [http-nio-8080-exec-4] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:39.998 [http-nio-8080-exec-1] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:10:39.998 [http-nio-8080-exec-1] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:10:39.999 [http-nio-8080-exec-1] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:10:40.522 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:40.522 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:40.522 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:40.523 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:40.523 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:40.523 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:40.524 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.524 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.524 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.525 [http-nio-8080-exec-9] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:40.525 [http-nio-8080-exec-7] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:10:40.525 [http-nio-8080-exec-10] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:10:40.525 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:40.525 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:40.525 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:40.525 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:40.525 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:40.525 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:40.526 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:40.526 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.526 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:40.529 [http-nio-8080-exec-10] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:10:40.529 [http-nio-8080-exec-10] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:10:40.530 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:10:40.530 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:10:40.531 [http-nio-8080-exec-10] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:10:40.533 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:40.706 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:40.706 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:40.707 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:40.707 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:40.707 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:40.707 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:40.707 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.707 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.707 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.708 [http-nio-8080-exec-8] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:10:40.708 [http-nio-8080-exec-5] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:10:40.708 [http-nio-8080-exec-6] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:40.708 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:40.708 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:40.709 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:40.709 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:40.709 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:40.709 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:40.709 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.709 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:40.709 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:40.711 [http-nio-8080-exec-5] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:10:40.712 [http-nio-8080-exec-5] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:10:40.712 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:10:40.712 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:10:40.712 [http-nio-8080-exec-5] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:10:40.713 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:40.937 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:40.937 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:40.937 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:40.937 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:40.938 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.938 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.938 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:40.939 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:40.939 [http-nio-8080-exec-2] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:10:40.939 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.939 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:40.939 [http-nio-8080-exec-3] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:10:40.940 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:40.940 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:40.940 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:40.940 [http-nio-8080-exec-4] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:40.941 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:40.941 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:40.941 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:40.941 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:40.941 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:40.943 [http-nio-8080-exec-3] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:10:40.943 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:10:40.944 [http-nio-8080-exec-3] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:10:40.944 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:10:40.945 [http-nio-8080-exec-3] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:10:40.946 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:41.097 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.097 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.097 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.097 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.098 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.098 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.098 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.099 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.099 [http-nio-8080-exec-9] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:10:41.099 [http-nio-8080-exec-1] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:10:41.099 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.099 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:41.099 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.100 [http-nio-8080-exec-10] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:41.100 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:41.100 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:41.100 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.100 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:41.100 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.101 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:41.101 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.102 [http-nio-8080-exec-9] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:10:41.102 [http-nio-8080-exec-1] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:10:41.103 [http-nio-8080-exec-9] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:10:41.103 [http-nio-8080-exec-1] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:10:41.103 [http-nio-8080-exec-9] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:10:41.104 [http-nio-8080-exec-1] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:41.235 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.235 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.235 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.235 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.235 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.235 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.236 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.236 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.236 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.236 [http-nio-8080-exec-6] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:10:41.236 [http-nio-8080-exec-7] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:10:41.236 [http-nio-8080-exec-5] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:41.237 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:41.237 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:41.237 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.237 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:41.237 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.237 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.238 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:41.238 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:41.238 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.240 [http-nio-8080-exec-6] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:10:41.240 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:10:41.240 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:10:41.240 [http-nio-8080-exec-6] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:10:41.241 [http-nio-8080-exec-6] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:10:41.242 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:41.369 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.370 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.370 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.370 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.370 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.370 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.371 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.371 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.371 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.371 [http-nio-8080-exec-8] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:10:41.371 [http-nio-8080-exec-4] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:10:41.371 [http-nio-8080-exec-3] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:41.372 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:41.372 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:41.372 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:41.372 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.372 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.372 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.373 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:41.373 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:41.373 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.375 [http-nio-8080-exec-4] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:10:41.375 [http-nio-8080-exec-4] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:10:41.375 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:10:41.375 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:10:41.376 [http-nio-8080-exec-4] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:10:41.378 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:41.499 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.499 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.499 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.499 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.499 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.499 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.500 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.500 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.500 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.501 [http-nio-8080-exec-2] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:10:41.501 [http-nio-8080-exec-9] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:41.501 [http-nio-8080-exec-10] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:10:41.501 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:41.501 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:41.501 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:41.502 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.502 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.502 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.502 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.502 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:41.502 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:41.504 [http-nio-8080-exec-10] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:10:41.504 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:10:41.505 [http-nio-8080-exec-10] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:10:41.505 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:10:41.506 [http-nio-8080-exec-10] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:10:41.506 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:41.800 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.800 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.800 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.801 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:41.800 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.801 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: d650a43edf62441a864be9c54677c11c(String)
+2021-12-31 00:10:41.801 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.801 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.801 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.802 [http-nio-8080-exec-6] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:41.802 [http-nio-8080-exec-5] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/clazz/list，请求参数：{"pageNum":1,"pageSize":1000} 
+2021-12-31 00:10:41.802 [http-nio-8080-exec-1] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/student/list，请求参数：{"keyword":"","department":"","clazzName":"","displayUserNo":"","pageNum":1,"pageSize":10} 
+2021-12-31 00:10:41.802 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:41.802 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:41.802 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.802 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.802 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==>  Preparing: select a.*, b.name clazzName, b.department from edu_account_auth a left join edu_clazz b on b.id = a.clazz_id where a.account_id in ( ? )
+2021-12-31 00:10:41.803 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:41.803 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:41.803 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:41.803 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.getAuthListByAccountIds [BaseJdbcLogger.java:137] - <==      Total: 0
+2021-12-31 00:10:41.805 [http-nio-8080-exec-5] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, CONCAT(t.department,'/',t.name) allName from edu_clazz t WHERE t.delete_flag = 0 order by t.id desc LIMIT ?
+2021-12-31 00:10:41.805 [http-nio-8080-exec-1] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==>  Preparing: select t.*, (select a.username from edu_account a where a.id = t.create_user_id) createUsername, (select a.username from edu_account a where a.id = t.delete_user_id) deleteUsername, c.name clazzName, c.department, s.user_no from edu_student t left join edu_clazz c on c.id = t.clazz_id left join edu_student_status s on s.identity_card_no = t.identity_card_no order by t.id desc LIMIT ?
+2021-12-31 00:10:41.805 [http-nio-8080-exec-1] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - ==> Parameters: 10(Integer)
+2021-12-31 00:10:41.805 [http-nio-8080-exec-5] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - ==> Parameters: 1000(Integer)
+2021-12-31 00:10:41.806 [http-nio-8080-exec-5] DEBUG c.m.s.m.C.listAll [BaseJdbcLogger.java:137] - <==      Total: 7
+2021-12-31 00:10:41.807 [http-nio-8080-exec-1] DEBUG c.m.s.m.S.listStudents [BaseJdbcLogger.java:137] - <==      Total: 10
+2021-12-31 00:10:46.404 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryByUsername [BaseJdbcLogger.java:137] - ==>  Preparing: select * from edu_account t where t.username = ?
+2021-12-31 00:10:46.405 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryByUsername [BaseJdbcLogger.java:137] - ==> Parameters: admin(String)
+2021-12-31 00:10:46.406 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryByUsername [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:46.407 [http-nio-8080-exec-7] INFO  c.m.s.s.s.i.SessionServiceImpl [SessionServiceImpl.java:49] - admin账号校验成功！
+2021-12-31 00:10:46.408 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.insert [BaseJdbcLogger.java:137] - ==>  Preparing: INSERT INTO edu_account_login ( token, username, user_info, create_time ) VALUES ( ?, ?, ?, ? )
+2021-12-31 00:10:46.409 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.insert [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String), admin(String), {"accountType":1,"createTime":1625661968000,"id":1,"lastLoginTime":1640880462000,"password":"21232f297a57a5a743894a0e4a801fc3","status":1,"username":"admin"}(String), 2021-12-31 00:10:46.407(Timestamp)
+2021-12-31 00:10:46.415 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.insert [BaseJdbcLogger.java:137] - <==    Updates: 1
+2021-12-31 00:10:46.416 [http-nio-8080-exec-7] INFO  c.m.s.s.s.i.SessionServiceImpl [SessionServiceImpl.java:64] - 账户登录记录插入成功
+2021-12-31 00:10:46.417 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.updateById [BaseJdbcLogger.java:137] - ==>  Preparing: UPDATE edu_account SET username=?, password=?, status=?, account_type=?, create_time=?, last_login_time=? WHERE id=?
+2021-12-31 00:10:46.421 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.updateById [BaseJdbcLogger.java:137] - ==> Parameters: admin(String), 21232f297a57a5a743894a0e4a801fc3(String), 1(Integer), 1(Integer), 2021-07-07 20:46:08.0(Timestamp), 2021-12-31 00:10:46.416(Timestamp), 1(Integer)
+2021-12-31 00:10:46.424 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.updateById [BaseJdbcLogger.java:137] - <==    Updates: 1
+2021-12-31 00:10:46.425 [http-nio-8080-exec-7] INFO  c.m.s.s.s.i.SessionServiceImpl [SessionServiceImpl.java:69] - 账户最近一次登陆记录更新成功
+2021-12-31 00:10:46.435 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:46.436 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:46.436 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:46.437 [http-nio-8080-exec-3] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/query，请求参数：{} 
+2021-12-31 00:10:46.454 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:46.454 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:46.454 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:46.454 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:46.454 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:46.455 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:46.455 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:46.455 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:46.455 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:46.456 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:46.456 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:46.456 [http-nio-8080-exec-8] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/student/number，请求参数：{} 
+2021-12-31 00:10:46.456 [http-nio-8080-exec-9] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/class/number，请求参数：{} 
+2021-12-31 00:10:46.456 [http-nio-8080-exec-4] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/class/student/number，请求参数：{"department":"2021"} 
+2021-12-31 00:10:46.456 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:10:46.456 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:10:46.456 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:46.456 [http-nio-8080-exec-9] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:10:46.456 [http-nio-8080-exec-4] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.`name` clazzName, (SELECT COUNT(1) FROM edu_student s WHERE s.clazz_id = t.`id`) studentNum FROM edu_clazz t WHERE t.`department` LIKE ?"%"
+2021-12-31 00:10:46.456 [http-nio-8080-exec-9] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:10:46.456 [http-nio-8080-exec-4] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 2021(String)
+2021-12-31 00:10:46.457 [http-nio-8080-exec-2] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:46.457 [http-nio-8080-exec-9] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:10:46.457 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:10:46.457 [http-nio-8080-exec-4] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:10:46.457 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:46.457 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:10:46.457 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:46.457 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 7(Integer)
+2021-12-31 00:10:46.458 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:46.458 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:46.458 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:10:46.459 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 6(Integer)
+2021-12-31 00:10:46.459 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:46.460 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:10:46.460 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 5(Integer)
+2021-12-31 00:10:46.460 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:46.460 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? , ? , ? , ? )
+2021-12-31 00:10:46.461 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2021-12-31 00:10:46.461 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:50.123 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:50.124 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:50.125 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:50.131 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:50.133 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:50.123 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:50.123 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:50.133 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:50.134 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:50.134 [http-nio-8080-exec-5] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/class/number，请求参数：{} 
+2021-12-31 00:10:50.135 [http-nio-8080-exec-5] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:10:50.135 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:50.135 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:50.135 [http-nio-8080-exec-5] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:10:50.135 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:50.135 [http-nio-8080-exec-10] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/class/student/number，请求参数：{"department":"2021"} 
+2021-12-31 00:10:50.135 [http-nio-8080-exec-1] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:50.136 [http-nio-8080-exec-5] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:10:50.136 [http-nio-8080-exec-6] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/student/number，请求参数：{} 
+2021-12-31 00:10:50.136 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:50.136 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.`name` clazzName, (SELECT COUNT(1) FROM edu_student s WHERE s.clazz_id = t.`id`) studentNum FROM edu_clazz t WHERE t.`department` LIKE ?"%"
+2021-12-31 00:10:50.136 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:50.136 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 2021(String)
+2021-12-31 00:10:50.136 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:10:50.136 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:10:50.137 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:50.137 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:10:50.137 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:10:50.137 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:10:50.138 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 7(Integer)
+2021-12-31 00:10:50.138 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:50.139 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:10:50.139 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 6(Integer)
+2021-12-31 00:10:50.139 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:50.140 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:10:50.140 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 5(Integer)
+2021-12-31 00:10:50.140 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:50.140 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? , ? , ? , ? )
+2021-12-31 00:10:50.141 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2021-12-31 00:10:50.141 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:56.079 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:56.079 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:56.080 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:56.080 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:56.082 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:56.082 [http-nio-8080-exec-3] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:56.082 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:56.082 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:10:56.083 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:10:56.083 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:56.083 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:56.083 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:56.084 [http-nio-8080-exec-3] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/student/number，请求参数：{} 
+2021-12-31 00:10:56.084 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:10:56.084 [http-nio-8080-exec-7] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/class/student/number，请求参数：{"department":"2021"} 
+2021-12-31 00:10:56.084 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:10:56.084 [http-nio-8080-exec-4] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:10:56.084 [http-nio-8080-exec-9] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/class/number，请求参数：{} 
+2021-12-31 00:10:56.084 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.`name` clazzName, (SELECT COUNT(1) FROM edu_student s WHERE s.clazz_id = t.`id`) studentNum FROM edu_clazz t WHERE t.`department` LIKE ?"%"
+2021-12-31 00:10:56.084 [http-nio-8080-exec-9] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:10:56.085 [http-nio-8080-exec-9] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:10:56.085 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 2021(String)
+2021-12-31 00:10:56.085 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:10:56.085 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:10:56.085 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:10:56.085 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:10:56.086 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 7(Integer)
+2021-12-31 00:10:56.086 [http-nio-8080-exec-9] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:10:56.086 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:10:56.087 [http-nio-8080-exec-4] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:56.087 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:56.087 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:10:56.088 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 6(Integer)
+2021-12-31 00:10:56.089 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:56.089 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:10:56.090 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 5(Integer)
+2021-12-31 00:10:56.091 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:10:56.091 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? , ? , ? , ? )
+2021-12-31 00:10:56.091 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2021-12-31 00:10:56.092 [http-nio-8080-exec-3] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:10.890 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:11:10.892 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:11:10.896 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:11:10.899 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:11:10.902 [http-nio-8080-exec-2] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:10.902 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:11:10.902 [http-nio-8080-exec-8] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:10.903 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:11:10.903 [http-nio-8080-exec-2] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/class/student/number，请求参数：{"department":"2021"} 
+2021-12-31 00:11:10.903 [http-nio-8080-exec-8] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/student/number，请求参数：{} 
+2021-12-31 00:11:10.903 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:11:10.903 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:11:10.903 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.`name` clazzName, (SELECT COUNT(1) FROM edu_student s WHERE s.clazz_id = t.`id`) studentNum FROM edu_clazz t WHERE t.`department` LIKE ?"%"
+2021-12-31 00:11:10.903 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:11:10.903 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 2021(String)
+2021-12-31 00:11:10.903 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:10.904 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:11:10.904 [http-nio-8080-exec-5] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:10.905 [http-nio-8080-exec-2] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:11:10.905 [http-nio-8080-exec-1] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:11:10.905 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:11:10.906 [http-nio-8080-exec-5] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/class/number，请求参数：{} 
+2021-12-31 00:11:10.906 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:11:10.906 [http-nio-8080-exec-5] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:11:10.906 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:11:10.906 [http-nio-8080-exec-5] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:11:10.906 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 7(Integer)
+2021-12-31 00:11:10.906 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:11:10.907 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:10.907 [http-nio-8080-exec-1] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:10.907 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:11:10.907 [http-nio-8080-exec-5] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:11:10.907 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 6(Integer)
+2021-12-31 00:11:10.908 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:10.908 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:11:10.909 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 5(Integer)
+2021-12-31 00:11:10.909 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:10.910 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? , ? , ? , ? )
+2021-12-31 00:11:10.910 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2021-12-31 00:11:10.910 [http-nio-8080-exec-8] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:48.642 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:11:48.642 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:11:48.642 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:11:48.643 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:11:48.644 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:11:48.645 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:11:48.647 [http-nio-8080-exec-6] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:48.649 [http-nio-8080-exec-7] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:48.650 [http-nio-8080-exec-7] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/class/number，请求参数：{} 
+2021-12-31 00:11:48.650 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:11:48.651 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:11:48.658 [http-nio-8080-exec-7] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:11:48.658 [http-nio-8080-exec-10] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:48.658 [http-nio-8080-exec-6] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/grade/student/number，请求参数：{} 
+2021-12-31 00:11:48.659 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+2021-12-31 00:11:48.659 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==>  Preparing: select t.* from edu_account_login t where t.token = ?
+2021-12-31 00:11:48.659 [http-nio-8080-exec-10] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/statistics/class/student/number，请求参数：{"department":"2021"} 
+2021-12-31 00:11:48.659 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - ==> Parameters: 
+2021-12-31 00:11:48.659 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - ==> Parameters: 92210b0a9cab4fe09dbc2e50217c4ec3(String)
+2021-12-31 00:11:48.659 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT t.`name` clazzName, (SELECT COUNT(1) FROM edu_student s WHERE s.clazz_id = t.`id`) studentNum FROM edu_clazz t WHERE t.`department` LIKE ?"%"
+2021-12-31 00:11:48.659 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 2021(String)
+2021-12-31 00:11:48.660 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeClazzNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:11:48.660 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.queryAccountByToken [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:48.660 [http-nio-8080-exec-10] DEBUG c.m.s.m.S.countClazzStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 4
+2021-12-31 00:11:48.660 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:11:48.660 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 7(Integer)
+2021-12-31 00:11:48.660 [http-nio-8080-exec-9] INFO  c.m.s.i.AccountLoginInterceptor [AccountLoginInterceptor.java:77] - ----------------当前请求IP：0:0:0:0:0:0:0:1，当前登录账号：admin，请求url：/api/account/menu，请求参数：{} 
+2021-12-31 00:11:48.661 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==>  Preparing: SELECT account_type,menu FROM edu_account_menu WHERE account_type=?
+2021-12-31 00:11:48.661 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer)
+2021-12-31 00:11:48.661 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:48.661 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:11:48.661 [http-nio-8080-exec-9] DEBUG c.m.s.m.A.selectById [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:48.661 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 6(Integer)
+2021-12-31 00:11:48.662 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:48.662 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? )
+2021-12-31 00:11:48.662 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 5(Integer)
+2021-12-31 00:11:48.663 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:11:48.663 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==>  Preparing: select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in ( ? , ? , ? , ? )
+2021-12-31 00:11:48.663 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - ==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)
+2021-12-31 00:11:48.664 [http-nio-8080-exec-6] DEBUG c.m.s.m.S.countGradeStudentNumber [BaseJdbcLogger.java:137] - <==      Total: 1
+2021-12-31 00:59:34.749 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=2m26s51ms).
+2021-12-31 01:15:33.312 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=15m28s553ms).
+2021-12-31 02:35:40.727 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=16m36s487ms).
+2021-12-31 02:52:37.711 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=16m56s984ms).
+2021-12-31 03:09:04.123 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=15m56s405ms).
+2021-12-31 04:26:26.737 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=16m51s759ms).
+2021-12-31 04:42:06.721 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=15m39s984ms).
+2021-12-31 05:00:16.610 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=17m39s879ms).
+2021-12-31 06:16:09.389 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=15m51s858ms).
+2021-12-31 06:31:57.400 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=15m48s11ms).
+2021-12-31 06:48:55.350 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=16m27s939ms).
+2021-12-31 08:08:48.926 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=19m22s769ms).
+2021-12-31 09:17:20.452 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=1h8m31s526ms).
+2021-12-31 10:20:33.940 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=1h3m13s488ms).
+2021-12-31 11:10:20.762 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=49m46s822ms).
+2021-12-31 12:15:48.029 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=1h5m27s267ms).
+2021-12-31 13:05:09.106 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=49m21s77ms).
+2021-12-31 13:28:56.673 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=23m47s567ms).
+2021-12-31 13:44:25.597 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=15m28s924ms).
+2021-12-31 13:49:29.240 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:686] - KevinHikariPool - Thread starvation or clock leap detected (housekeeper delta=4m33s633ms).
+2021-12-31 13:49:58.649 [KevinHikariPool housekeeper] WARN  c.z.h.p.HikariPool [HikariPool.java:677] - KevinHikariPool - Retrograde clock change detected (housekeeper delta=29s409ms), soft-evicting connections from pool.
+2021-12-31 13:52:47.406 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource [HikariDataSource.java:347] - KevinHikariPool - Shutdown initiated...
+2021-12-31 13:52:47.407 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource [HikariDataSource.java:349] - KevinHikariPool - Shutdown completed.

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ycj.student.mapper.StatisticsMapper">
+
+    <select id="countClazzStudentNumber" resultType="com.ycj.student.dto.statistics.ClazzStatisticsDTO">
+        SELECT t.`name` clazzName,
+        (SELECT COUNT(1) FROM edu_student s WHERE s.clazz_id = t.`id`) studentNum
+        FROM edu_clazz t
+        WHERE t.`department` LIKE #{department}"%"
+    </select>
+
+    <select id="countGradeClazzNumber" resultType="com.ycj.student.dto.statistics.GradeStatisticsDTO">
+        SELECT t.department gradeName,GROUP_CONCAT(t.id) clazzIds FROM edu_clazz t GROUP BY t.department
+    </select>
+
+
+    <select id="countGradeStudentNumber" resultType="java.lang.Integer">
+        select count(1) from edu_student t where t.delete_flag = 0 and t.clazz_id in
+        <foreach item="item" collection="clazzIdList" separator="," open="(" close=")" index="">
+            #{item}
+        </foreach>
+    </select>
+
+</mapper>
