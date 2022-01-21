@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+      - name: {{ .Release.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: {{ .Values.service.port }}
+        env:
+          - name: MYSQL_PORT
+            value: "30306"
+          - name: MYSQL_SERVER
+            value: "192.168.99.102"
+          - name: MYSQL_DB_NAME
+            value: "{{ .Values.mysql.dbName }}"
+          - name: MYSQL_USER_TEST
+            value: "root"
+          - name: MYSQL_PASSWORD_TEST
+            valueFrom:
+                secretKeyRef:
+                  name: mysql-password-test
+                  key: MYSQL_PASSWORD_TEST
+      imagePullSecrets:
+      - name: regcred-local
+      
