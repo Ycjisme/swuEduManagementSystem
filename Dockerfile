@@ -1,3 +1,4 @@
+#JDK拉取在服务器本地
 FROM java-font:8-jre-alpine
 MAINTAINER ycjisme0922
 VOLUME /tmp

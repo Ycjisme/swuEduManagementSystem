@@ -1,0 +1,9 @@
+#需要增强JDK，因为alpine中缺少FontConfiguration，那么就考虑安装ttf-dejavu这个软件。
+#在服务器中打镜像
+FROM java:8-jre-alpine
+# Install cURL
+RUN echo -e "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.4/main\n\
+https://mirror.tuna.tsinghua.edu.cn/alpine/v3.4/community" > /etc/apk/repositories
+
+RUN apk --update add curl bash ttf-dejavu && \
+      rm -rf /var/cache/apk/*
