@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: swuedu
-          image: ycjisme0922/swu-edu:1.1
+          image: ycjisme0922/swu-edu:1.4
           ports:
             - containerPort: 8080
           env:
